@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -17,13 +18,21 @@
     body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
     a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
-    header{padding:32px 20px 10px;border-bottom:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,rgba(187,102,255,.08),transparent)}
-    .wrap{max-width:var(--max);margin:0 auto}
+    header{padding:20px;border-bottom:1px solid rgba(255,255,255,.08);
+      background:linear-gradient(180deg,rgba(187,102,255,.08),transparent)}
+    .wrap{max-width:var(--max);margin:0 auto;position:relative}
     .headbar{display:flex;gap:16px;align-items:flex-start;justify-content:space-between}
+    .logo-side{
+      flex-shrink:0;
+      margin-right:12px;
+      opacity:.8;
+    }
+    .logo-side img{max-width:70px;height:auto;border-radius:var(--radius)}
+    .head-content{flex:1}
     .kicker{color:var(--muted);font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin:0 0 6px}
     h1{margin:0 0 6px;font-size:28px;line-height:1.2}
     .sub{margin:0;color:var(--muted)}
-    .contact{font-size:14px;color:var(--muted);text-align:right}
+    .contact{font-size:14px;color:var(--muted);text-align:right;min-width:180px}
     .contact a{font-weight:600}
     main{padding:28px 20px}
     section{max-width:var(--max);margin:0 auto 28px;padding:20px;border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);background:rgba(255,255,255,.02)}
@@ -39,11 +48,19 @@
 <body>
   <header>
     <div class="wrap headbar">
-      <div>
+      <!-- Small side-mark logo -->
+      <div class="logo-side">
+        <a href="http://swamiginstitute.github.io/">
+          <img src="http://swamiginstitute.github.io/SwamiG.gif" alt="SwamiG Institute Logo">
+        </a>
+      </div>
+
+      <div class="head-content">
         <p class="kicker">13Sep25 Divination</p>
         <h1>Divination Results from the Opon of SwamiG</h1>
         <p class="sub">Guidance for the spiritual family’s Africa journey. Early travelers to Benin and those meeting at the Eri Festival in Nigeria each carry distinct, harmonious currents — confirmed by <strong>Geb(+)</strong> with <strong>Osa</strong>.</p>
       </div>
+
       <div class="contact">
         <div>Contact:</div>
         <a href="mailto:Baba@SwamiGInstitute.com">Baba@SwamiGInstitute.com</a>
@@ -112,7 +129,7 @@
     <div class="wrap">
       <p>© SwamiG Institute — “Extending Royal Legacy ...on the shoulders of enlightened Ancestors”</p>
       <p>Contact: <a href="mailto:Baba@SwamiGInstitute.com">Baba@SwamiGInstitute.com</a></p>
-          </div>
+    </div>
   </footer>
 </body>
 </html>
